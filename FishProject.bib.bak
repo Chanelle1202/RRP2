@@ -11,17 +11,6 @@
   Url                      = {http://www.akvagroup.com/products/cage-farming-aquaculture/net-cleaning-systems}
 }
 
-@Book{beveridge2008cage,
-  Title                    = {Cage aquaculture},
-  Author                   = {Beveridge, Malcolm},
-  Publisher                = {John Wiley \& Sons},
-  Year                     = {2008},
-  Volume                   = {5},
-
-  Owner                    = {cl15753},
-  Timestamp                = {2016.03.23}
-}
-
 @Article{braithwaite2004marine,
   Title                    = {Marine biofouling on fish farms and its remediation},
   Author                   = {Braithwaite, RA and McEvoy, LA},
