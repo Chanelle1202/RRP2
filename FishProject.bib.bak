@@ -2,13 +2,15 @@
 % Encoding: Cp1252
 
 
-@Misc{AKVANetCleaner,
-  Author                   = {AKVAGROUP},
-  HowPublished             = {http://www.akvagroup.com/products/cage-farming-aquaculture/net-cleaning-systems},
+@Book{beveridge2008cage,
+  Title                    = {Cage aquaculture},
+  Author                   = {Beveridge, Malcolm},
+  Publisher                = {John Wiley \& Sons},
+  Year                     = {2008},
+  Volume                   = {5},
 
   Owner                    = {cl15753},
-  Timestamp                = {2016.03.22},
-  Url                      = {http://www.akvagroup.com/products/cage-farming-aquaculture/net-cleaning-systems}
+  Timestamp                = {2016.03.23}
 }
 
 @Article{braithwaite2004marine,
@@ -106,6 +108,20 @@ This paper was interesting although I found the explanations of the trials and r
   Timestamp                = {2016.03.22}
 }
 
+@Article{jensen2010escapes,
+  Title                    = {Escapes of fishes from Norwegian sea-cage aquaculture: causes, consequences and prevention},
+  Author                   = {Jensen, {\O} and Dempster, T and Thorstad, Eva B and Uglem, Ingebrigt and Fredheim, A and others},
+  Journal                  = {Aquaculture Environment Interactions},
+  Year                     = {2010},
+  Number                   = {1},
+  Pages                    = {71--83},
+  Volume                   = {1},
+
+  Owner                    = {cl15753},
+  Publisher                = {Inter-Research Science Center},
+  Timestamp                = {2016.03.24}
+}
+
 @InProceedings{jie2006study,
   Title                    = {Study on the Cage Net Crack Detection Facility of Sea Cage},
   Author                   = {Jie, Hu and Sheng, Ye},
@@ -135,13 +151,27 @@ This paper was interesting although I found the explanations of the trials and r
   Title                    = {Biofouling in the Marine Aquaculture Industry, with Particular Reference to Finfish - Current Status and Future Challenges},
 
   Author                   = {Mark G. J. Hartl, Douglas Watson and John Davenport},
-  HowPublished             = {http://www.thecrownestate.co.uk/media/5355/biofouling_marine_aquaculture.pdf},
+  HowPublished             = {\url{http://aquaculture.scotland.gov.uk/our\textunderscore_aquaculture/our\textunderscore_aquaculture.aspx}},
   Month                    = {Nov},
   Year                     = {2006},
 
   Owner                    = {cl15753},
   Timestamp                = {2016.03.23},
   Url                      = {http://www.thecrownestate.co.uk/media/5355/biofouling_marine_aquaculture.pdf}
+}
+
+@Article{mcdowell2002stream,
+  Title                    = {Stream of escaped farm fish raises fears for wild salmon},
+  Author                   = {McDowell, Natasha},
+  Journal                  = {Nature},
+  Year                     = {2002},
+  Number                   = {6881},
+  Pages                    = {571--571},
+  Volume                   = {416},
+
+  Owner                    = {cl15753},
+  Publisher                = {Nature Publishing Group},
+  Timestamp                = {2016.03.24}
 }
 
 @Article{nikolaou2014fish,
@@ -230,9 +260,18 @@ This review paper was very well structured, delivering its message in a clear an
   Timestamp                = {2016.02.18}
 }
 
+@Misc{AKVA,
+  Title                    = {AKVA group-Net Cleaning Sytems},
+  HowPublished             = {\url{http://www.akvagroup.com/products/cage-farming-aquaculture/net-cleaning-systems}},
+
+  Owner                    = {cl15753},
+  Timestamp                = {2016.03.24},
+  Url                      = {http://www.akvagroup.com/products/cage-farming-aquaculture/net-cleaning-systems}
+}
+
 @Misc{crab2016,
   Title                    = {Collective Research on Aquaculture Biofouling},
-  HowPublished             = {http://www.crabproject.com/},
+  HowPublished             = {\url{http://www.crabproject.com/}},
   Note                     = {Accessed: 23/03/2016},
 
   Owner                    = {cl15753},
@@ -240,12 +279,30 @@ This review paper was very well structured, delivering its message in a clear an
   Url                      = {http://www.crabproject.com/}
 }
 
+@Misc{MIC,
+  Title                    = {MIC Net Cleaning System},
+  HowPublished             = {\url{http://www.micmarine.com.au/}},
+
+  Owner                    = {cl15753},
+  Timestamp                = {2016.03.24},
+  Url                      = {http://www.micmarine.com.au/}
+}
+
 @Misc{ScotAqua,
-  Title                    = {Scotland's Aquaculture {Our Aquaculture}},
-  HowPublished             = {http://aquaculture.scotland.gov.uk/our_aquaculture/our_aquaculture.aspx},
+  Title                    = {Scotland's Aquaculture -Our Aquaculture},
+  HowPublished             = {\url{http://aquaculture.scotland.gov.uk/our\textunderscore_aquaculture/our\textunderscore_aquaculture.aspx}},
 
   Owner                    = {cl15753},
   Timestamp                = {2016.03.23},
-  Url                      = {http://aquaculture.scotland.gov.uk/our_aquaculture/our_aquaculture.aspx}
+  Url                      = {http://aquaculture.scotland.gov.uk/our\_aquaculture/our\_aquaculture.aspx}
+}
+
+@Misc{Yanmar,
+  Title                    = {Net Cleaning Robot-Yanmar Marine},
+  HowPublished             = {\url{http://www.yanmarmarine.eu/Products/Net-Cleaning-Robot/}},
+
+  Owner                    = {cl15753},
+  Timestamp                = {2016.03.24},
+  Url                      = {http://www.yanmarmarine.eu/Products/Net-Cleaning-Robot/}
 }
 

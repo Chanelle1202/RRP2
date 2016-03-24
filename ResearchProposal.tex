@@ -1,5 +1,5 @@
 \documentclass[11.5pt, twoside, a4paper]{article}
-\usepackage{graphicx, amssymb, amsmath, amsthm, xfrac, mathabx, upgreek, fancyhdr, float}
+\usepackage{graphicx, amssymb, amsmath, amsthm, xfrac, mathabx, upgreek, fancyhdr, float, underscore, url}
 
 
 \begin{document}
@@ -21,7 +21,7 @@ This project aims to be part of wider work towards a prototype robotic platform 
 \item clean the net of fouling, and
 \item monitor fish.
 \end{enumerate}
-The timescale of this project is insufficient to tackle all of these problems and so the second has been chosen as the main aim of this project, with some brief discussion of the mechanism of movement about the net as such as it impacts upon the main aim.
+The time scale of this project is insufficient to tackle all of these problems and so the second has been chosen as the main aim of this project.
 
 \section{Aims and Objectives}
 As discussed this project will concentrate the performance of net inspection tasks of an underwater net cleaning robotic platform. The three aims of these inspection tasks, and the project objectives for each, are:
@@ -49,31 +49,41 @@ All of these aims will be tested against images from fish farms and real net in 
 
 \section{Motivation}
 
-Aquaculture is an increasingly important industry to Scotland, helping to create `sustainable economic growth in rural and coastal communities' \cite{ScotAqua} and is the world's third largest supplier of Atlantic Salmon. One important challenge to be tackled in aquaculture is the issue of biofouling; the colonisation of marine algae and animals on submerged components of cages and nets \cite{fitridge2012impact}. Biofouling of nets and cages has four main harmful effects \cite{fitridge2012impact} \cite{beveridge2008cage} \cite{Crown}:
+Aquaculture is an increasingly important industry to Scotland, helping to create `sustainable economic growth in rural and coastal communities' \cite{ScotAqua} and is the world's third largest supplier of Atlantic Salmon. One important challenge to be tackled in aquaculture is the issue of biofouling; the colonisation of marine algae and animals on submerged components of cages and nets \cite{fitridge2012impact}. Biofouling of nets and cages has four main harmful effects \cite{fitridge2012impact, beveridge2008cage, Crown}:
 \begin{itemize}
 \item Restriction of water exchange from the occlusion of the netting mesh, which leads to lower dissolved oxygen (DO) levels and a build up of excess feed and waste. 
 \item Cage deformation and structural fatigue from the extra weight and hydrodynamic forces upon the net.
 \item Disease risk as fouling communities can act as reservoirs for pathogens and parasites.
 \item The escape of stock due to net damage.
 \end{itemize}
-These all have a significant impact on the profitability of aquaculture through the loss of stock and net replacement and its removal is `expensive and labour-intensive, accounting for $20+\%$ of the market price of produce' \cite{Crown}.
+These all have a significant impact on the profitability of aquaculture through the loss of stock and net replacement and its removal is `expensive and labour-intensive, accounting for $20+\%$ of the market price of produce' \cite{Crown}. 
 
-Current methods of biofouling removal include manual cleaning both in and out of the water, chemical antifoulants and biological control. Manual cleaning of nets usually requires their removal from the water and then manual scrubbing with brushes and pressurized water; however, not only is this `tedious and labour intensive' \cite{braithwaite2004marine}, but removing the nets from the water can cause damage to the nets and stress the fish by interrupting feeding schedules, hence affecting growth rates and even leading to mortalities \cite{Crown}. In situ net cleaning is traditionally done manually done with divers, which although mitigates the detrimental effects on stock, is still expensive and labour-intensive, but now `underwater cleaners are in widespread use' and `in situ cleaning is now almost fully automated and the dominant removal strategy in the largest fish farms' \cite{fitridge2012impact}. 
+Traditional methods of biofouling removal include antifoulant paints, biological control and physical cleaning both in and out of the water. Toxic antifoulant paints have in the past been favoured as they are `more economical than manual cleaning' \cite{braithwaite2004marine}; the paint works by leaching biocides, such as copper, preventing fouling organisms from gaining a foothold on the net surfaces with treatments generally providing six months of protection \cite{beveridge2008cage}. However, reports that `copper levels in UK waters may be having an ecological effect' are raising concerns about the possible `long-term adverse effects in the environment' of antifoulants and in response their use is being phased out in the UK and across Europe. \cite{fitridge2012impact,braithwaite2004marine} Biological control of fouling, the inclusion of other species who feed on fouling organisms, has been suggested as the natural way to combat fouling, but it has been found to be `operationally impractical' \cite{Crown} and can lead to net damage and aggression against the stock species \cite{beveridge2008cage}. Physical cleaning of nets usually requires their removal from the water, then manual scrubbing with brushes and the use of pressurized water to remove the fouling; however, not only is this `tedious and labour-intensive' \cite{braithwaite2004marine}, but frequent handling and washing can damage nets and net changes cause unnecessary stress to the fish. \cite{Crown,fitridge2012impact}. In situ net cleaning is usually performed by trained divers, is still expensive and inefficient, although it negates the need to remove the net from the water, mitigating the harmful effects upon both net and fish. Clearly, the high costs of physically cleaning nets are prohibitive and so it is performed relatively infrequently; this can lead to build ups of fouling, which can harbour harmful algae, bacteria, viruses and parasitic eggs and also allows net damage to go unchecked. Damage to nets is the `dominant means of reported escape for fish from Norwegian aquaculture' with two in three of all fish escapes being due to holes in netting \cite{jensen2010escapes} and fish escapes from cage farms not only represent an economic loss for the farmer, but also have many negative repercussions on the wild fish population \cite{mcdowell2002stream,jensen2010escapes}. Recently, the industry has been investigating the use of silicone-based foul-release coatings developed for marine vessels, which aim at `reducing or preventing the adhesion of fouling' \cite{fitridge2012impact}, as a non-toxic alternative to traditional antifoulant paints. Although their use relies upon the velocity of ships to dislodge the fouling, they would make the fouling easier to clean from netting and so many sources are recommending a move towards `foul-release coatings combined with in situ cleaning' \cite{Crown}. 
 
-
-
-
-
-
-
-
-
-
-
+In recent years, many remotely operated underwater vehicles (ROV) systems of in situ net cleaning are emerging \cite{AKVA, MIC, Yanmar}; however, all of these still require at least one human operator and so are still limited in their frequency of deployment. If the current ROVs systems could attain autonomy they would be able to continually clean and inspect the net with no need for a human operator; any damage or indications of parasites or disease could be discovered promptly, allowing fish farmers to then allocate more valuable resources, such as the time of trained divers, to remedial action, as opposed to wasting it on routine inspections. In order to do this it would need the ability to identify the net itself, and any biofouling or damage.  It has also been observed that there can be substantial spatial variations in the amount and types of biofouling within a cage system \cite{fitridge2012impact,hodson1997biofouling} and so in order to use resources efficiently a method of quantifying the amount of fouling would be needed. In addition, there is currently little data about biofouling and a way of monitoring could aid efforts to remove and even prevent it.
 
 \section{Literature Review}
 
+
+
 \section{Risk Register}
+
+\begin{table}[h]
+\centering 
+\begin{tabular}{|p{3cm}|p{3.5cm} |c |c| c|} \hline
+Risk & Mitigation & Likelihood & Impact & Score \\ [0.5ex] 
+\hline 
+Acquisition of netting samples. & Ask for netting samples early so there is time to try different sources. & 3 & 3 & 9\\
+\hline
+Issue with testing tank rendering it unusable. & Allow flexibility so testing can be performed in a different tank. & 1 & 2 & 2\\
+\hline
+Unable to travel and meet fish farmers. & Utilise alternative communication methods, such as Skype or email. & 2 & 1 & 2\\
+\hline
+\end{tabular}
+\label{table:risks} 
+\caption{Risk Register} 
+\end{table}
+
 
 \section{Gantt Chart}
 
