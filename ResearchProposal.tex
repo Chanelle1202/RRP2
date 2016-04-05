@@ -2,7 +2,6 @@
 \usepackage{graphicx, amssymb, amsmath, amsthm, xfrac, mathabx, upgreek, fancyhdr, float, underscore, url}
 \usepackage[margin=2cm]{geometry}
 \usepackage[section]{placeins}
-\setcounter{section}{-1}
 
 \begin{document}
 
@@ -42,7 +41,7 @@ As discussed this project will concentrate the performance of net inspection tas
 \item Create software to recognise different species, specifically warning if recognise harmful species.
 \end{itemize}
 \end{enumerate}
-All of these aims will be tested against images from fish farms and an experimental tank setup with real samples of netting, where the levels of biofouling and the quality of the water will be varied to test performance. If time allows, further work will be done to use the software developed here for locating the net and biofouling to create a simple navigational system for an AUV.
+All of these aims will be tested against images from fish farms and an experimental tank set-up with real samples of netting, where the levels of biofouling and the quality of the water will be varied to test performance. If time allows, further work will be done to use the software developed here for locating the net and biofouling to create a simple navigational system for an AUV.
 
 \section{Motivation}
 
@@ -63,11 +62,11 @@ In summary, the main limitations of the state-of-the-art are the adverse environ
 
 \section{Literature Review}
 
-This literature review will first briefly look at current state-of-the-art in-situ net cleaners. Then, in light of the limitations of these discussed above, the rest of the review will focus on current computer vision techniques which could help give autonomy to current net cleaners.
+This literature review will first briefly look at current state-of-the-art in situ net cleaners. Then, in light of the limitations of these discussed above, the rest of the review will focus on current computer vision techniques which could help give autonomy to current net cleaners.
 
 \subsection{In Situ Mechanical Net Cleaners}
 
-One of the first instances of a mechanial in-situ net cleaner is \cite{hodson2000biofouling} in 1996, where it is proposed as way to allow longer periods of net immersion and so mitigate some of the costs and labour involved in on-shore cleaning. The cleaner comprised of four pairs of contra-rotating brushes and was attached to the handrail of the cage. Problems faced included; poor efficacy of the cleaner as the brushes has limited contact with the netting, a compromise was needed between brushing severity and the prevention of damage to netting, and the large amounts of debris created which could irritate fish or enable rapid recolonisation or regrowth. With the future introduction of foul-release silicon coatings the first two will become lesser issues; however, there is definitely a need for a debris removal system. 
+One of the first instances of a mechanial in situ net cleaner is \cite{hodson2000biofouling} in 1996, where it is proposed as way to allow longer periods of net immersion and so mitigate some of the costs and labour involved in on-shore cleaning. The cleaner comprised of four pairs of contra-rotating brushes and was attached to the handrail of the cage. Problems faced included; poor efficacy of the cleaner as the brushes has limited contact with the netting, a compromise was needed between brushing severity and the prevention of damage to netting, and the large amounts of debris created which could irritate fish or enable rapid recolonisation or regrowth. With the future introduction of foul-release silicon coatings the first two will become lesser issues; however, there is definitely a need for a debris removal system. 
 
 \begin{figure}
 \begin{center}
@@ -77,7 +76,7 @@ One of the first instances of a mechanial in-situ net cleaner is \cite{hodson200
 \end{figure}
 
 
-There are now in situ net cleaners on the market \cite{Yanmar,AKVA,MPI,Hughesbrochure,MIC} and they have approached the problems raised by \cite{hodson1997biofouling} in a variety of ways. All \cite{AKVA,Hughesbrochure,MPI} use water ejectors to keep the cleaner pushed up against the net for more effective cleaning, while \cite{Yanmar} uses crawler belts and wheels to keep in contact with the net. Most use pressurised water to remove fouling, but \cite{MIC} is the only one found to use vacuum based net cleaning to remove the harmful debris. All of these cleaners appear very effective at cleaning biofouling; however, they still all require human operation, whether that is using a crane on a boat \cite{AKVA} or mounted on an ROV \cite{Hughesbrochure}. The next logical step then is to make these cleaners fully autonomous; this would reduce labour involved to maintenance, and would mean that the net would be constantly cleaned and inspected.
+There are now in situ net cleaners on the market \cite{Yanmar,AKVA,MPI,Hughesbrochure,MIC} and they have approached the problems raised by \cite{hodson1997biofouling} in a variety of ways. All \cite{AKVA,Hughesbrochure,MPI} use water ejectors to keep the cleaner pushed up against the net for more effective cleaning, while \cite{Yanmar} uses crawler belts and wheels to keep in contact with the net. Most use pressurised water to remove fouling, but \cite{MIC} is the only one found to use vacuum based net cleaning to remove the harmful debris. All of these cleaners appear very effective at cleaning biofouling; however, they still all require human operation, whether that is using a crane on a boat \cite{AKVA} or mounted on an ROV \cite{Hughesbrochure}. All are fitted with cameras, allowing the human operator to perform inspections tasks, such as detecting net damage, whilst operating the cleaner \cite{Yanmar}. The next logical step then is to make these cleaners fully autonomous; this would reduce labour involved to maintenance, and would mean that the net would be constantly cleaned and inspected.
 
 \subsection{Net Damage Detection}
 
@@ -97,7 +96,7 @@ Detection of net damage is not implemented in \cite{jakobsen2011automatic} due t
 
 
 \subsection{Biofouling Detection and Quantification}
-The classic method for quantifying biofouling of fish-cage netting was to remove fouled netting from the water and then weigh it \cite{hodson1995situ}; however, this is obviously not a suitable method for this project. In \cite{hodson2000biofouling} the idea of using image analysis to quantify net fouling is first suggested and a method of quantifying net fouling in terms of mesh occlusion is given and as mesh occlusion is arguably the most detrimental effect of biofouling \cite{beveridge2008cage,fitridge2012impact,braithwaite2004marine}, this would provide a pertinent measurement for the amount of fouling.  Photographs were taken in situ with a single Nikonos-V camera and alterations to the environment were a single strobe light and a blue backing sheet to increase background contrast. The use of an artificial background is also found in \cite{braithwaite2007biofouling,edwards2015effectiveness} and this gives some cause for concern as to whether the method will be effective without the contrasting background. On the other hand, \cite{guenther2010development,svane2006test} all make no mention of using an artificial background, or that their results suffered by not having one. Although most studies \cite{braithwaite2007biofouling,guenther2010development,edwards2015effectiveness,gansel2015drag} only used a single camera, \cite{svane2006test} used two Nikonos V cameras to produces stereo-photographs giving a three-dimensional view of the net which could prove useful as an additional method of observing fouling; however, as no image analysis methods are discussed it can be inferred that the images were analysed manually, meaning caution should be had when approaching this method of image acquisition. Unfortunately, only \cite{guenther2010development} mentions the distance from the netting at which photographs were taken; the intial set up had the camera 12cm away from the netting, but modifications were made so that the camera was at a distance of 38cm from the net to `obtain an increase field of view'. This will be an important consideration for the project and will depend upon the AUV cleaner design and a trade off between other criteria. The field of view will need to be large enough to gather sufficient data, but, depending on the mesh size, this could lead to a very dense image, which require more computational power to analyse. Furthermore, by taking images closer to the net, illumination and turbidity are less of a problem due to the greater control of the scene that is within the field of view at any given time.
+The classic method for quantifying biofouling of fish-cage netting was to remove fouled netting from the water and then weigh it \cite{hodson1995situ}; however, this is obviously not a suitable method for this project. In \cite{hodson2000biofouling} the idea of using image analysis to quantify net fouling is first suggested and a method of quantifying net fouling in terms of mesh occlusion is given and as mesh occlusion is arguably the most detrimental effect of biofouling \cite{beveridge2008cage,fitridge2012impact,braithwaite2004marine}, this would provide a pertinent measurement for the amount of fouling.  Photographs were taken in situ with a single Nikonos-V camera and alterations to the environment were a single strobe light and a blue backing sheet to increase background contrast. The use of an artificial background is also found in \cite{braithwaite2007biofouling,edwards2015effectiveness} and this gives some cause for concern as to whether the method will be effective without the contrasting background. On the other hand, \cite{guenther2010development,svane2006test} all make no mention of using an artificial background, or that their results suffered by not having one. Although most studies \cite{braithwaite2007biofouling,guenther2010development,edwards2015effectiveness,gansel2015drag} only used a single camera, \cite{svane2006test} used two Nikonos V cameras to produces stereo-photographs giving a three-dimensional view of the net which could prove useful as an additional method of observing fouling; however, as no image analysis methods are discussed it can be inferred that the images were analysed manually, meaning caution should be had when approaching this method of image acquisition. Unfortunately, only \cite{guenther2010development} mentions the distance from the netting at which photographs were taken; the initial set up had the camera 12cm away from the netting, but modifications were made so that the camera was at a distance of 38cm from the net to `obtain an increase field of view'. This will be an important consideration for the project and will depend upon the AUV cleaner design and a trade off between other criteria. The field of view will need to be large enough to gather sufficient data, but, depending on the mesh size, this could lead to a very dense image, which require more computational power to analyse. Furthermore, by taking images closer to the net, illumination and turbidity are less of a problem due to the greater control of the scene that is within the field of view at any given time.
 
 As most of the papers reviewed only discuss their method of biofouling quantification as a discussion of their testing set up for experiments, many lacked details with regards to their image processing methods. \cite{braithwaite2007biofouling} simply states the use of the software package `Image-Pro Plus 45' and the use of a written for purpose `macro-instruction'. \cite{hodson1995situ} used IDRISI, now called TerrSet, an `integrated geospatial software system' \cite{TerrSet} by Clark Labs. Segmentation by thresholding was used by \cite{guenther2010development,gansel2015drag,jakobsen2011automatic} to separate foreground and background in the images. Both \cite{guenther2010development} and \cite{jakobsen2011automatic} agree that the red channel was the most effective, but, despite following \cite{guenther2010development}, \cite{gansel2015drag} decided to use the luminance channel. As \cite{gansel2015drag} was working with a highly artificial environment compared to \cite{guenther2010development,jakobsen2011automatic} it is likely that the red channel would provide the better results for this project; however, it will be worth investigating due to the changeable nature of the environment. Only \cite{jakobsen2011automatic} has run these image processing methods in real time and even then a laptop was used, as the aim is to implement on a UAV any software would have to run in real time and with the limited computing power of a UAV.
 
@@ -113,7 +112,7 @@ This aim of the project is perhaps the least supported by the literature. All re
 
 \subsection{Discussion}
 
-To surmise, most of the literature discussed has only been used to identify and quantify biofouling for scientific studies with the image processing performed ex-situ. This project aims to be the first to move these methods in-situ and much of the work involved will concern evolving the methods to deal with these more challenging conditions. It will begin by replicating the work of \cite{jakobsen2011automatic}, developing the net damage detection algorithm mentioned in further work and then aims to integrate the biofouling quantification methods mentioned in \cite{hodson1995situ,guenther2010development}. Then there will be an investigation as to whether available image analysis techniques are able to identify biofouling in-situ, and if this proves possible the project aims be the first to apply them.
+To surmise, most of the literature discussed has only been used to identify and quantify biofouling for scientific studies with the image processing performed ex situ. This project aims to be the first to move these methods in situ and much of the work involved will concern evolving the methods to deal with these more challenging conditions. It will begin by replicating the work of \cite{jakobsen2011automatic}, developing the net damage detection algorithm mentioned in further work and then aims to integrate the biofouling quantification methods mentioned in \cite{hodson1995situ,guenther2010development}. Then there will be an investigation as to whether available image analysis techniques are able to identify biofouling in situ, and if this proves possible the project aims be the first to apply them.
 
 \section{Risk Register}
 
@@ -148,15 +147,22 @@ The necessary resources required for this project include:
 \item Laser module. (Either replicated from \cite{jakobsen2011automatic} or a suitable substitute.)
 \item Strobe-lights.
 \item Matlab with the Image Processing ToolBox.
-\item A robotic platform such as an Arduino.
+\item A small form factor embedded computer.
 \end{itemize}
+
+Most of these resources are already available in the BRL and net samples are being acquired through Dr. Giuseppe Paladini from the University of Stirling’s Institute of Aquaculture, who is an
+external supervisor on this project.
 
 \begin{figure}
 \begin{center}
 \includegraphics{Gantt.jpg}
-\caption{Gantt chart showing project time line and important events \label{fig:gantt}}
+\caption{Gantt chart showing project timeline and important events \label{fig:gantt}}
 \end{center}
 \end{figure}
+
+\section{Concluding Remarks}
+
+The aquaculture industry is obviously suffering from the harmful effects of biofouling and, as stricter legislation come into effect banning the use of chemical antifoulants, there is an increasing need for effective and efficient in situ net cleaning methods. There are many commercial in situ net cleaners which are very effective cleaners, but autonomy would make them far more efficient. An autonomous net cleaning would need a computer vision system capable of detecting netting and biofouling in situ. After reviewing the literature it is clear that in situ net detection is possible and within the biofouling scientific community there are some established methods for identifying and quantifying biofouling; however, these techniques have not yet been used to improve commercial in situ net cleaners. This project aims to start bridging this gap, and from the suggested timeline and identified resources needed, it should be viable in the given time period and with the available resources.
 
 \bibliographystyle{unsrt}
 \bibliography{FishProject}{}
